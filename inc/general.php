@@ -2,25 +2,24 @@
 
 /**
  * Optimization for both frontend and backend.
+ *
  * @package Quicksilver
+ * @author  Mechanika Design <info@mechanikadesign.com>
+ * @link    https://mechanikadesign.com
  */
+
+namespace Quicksilver;
 
 /**
  * General optimization class.
- * @package Quicksilver
  */
-class Quicksilver_General {
+class General {
 	/**
-	 * Add hooks when class is loaded.
+	 * Add hooks.
 	 */
 	public function __construct() {
-		// Disable heartbeat.
 		add_action( 'init', array( $this, 'disable_heartbeat' ), 1 );
-
-		// Disable emojis.
 		add_action( 'init', array( $this, 'disable_emojis' ) );
-
-		// Disable self ping.
 		add_action( 'pre_ping', array( __CLASS__, 'no_self_ping' ) );
 	}
 
