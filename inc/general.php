@@ -71,5 +71,4 @@ class Quicksilver_General {
 			}
 		}
 	}
-
 }
