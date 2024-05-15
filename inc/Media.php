@@ -27,7 +27,7 @@ class Media {
 		add_filter( 'style_loader_src', array( $this, 'unversion' ) );
 
 		// Use jQuery from Google CDN.
-		add_action( 'init', array( $this, 'jquery_cdn' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'jquery_cdn' ) );
 	}
 
 	/**
@@ -40,13 +40,16 @@ class Media {
 
 	/**
 	 * Remove version for scripts and styles.
+	 *
 	 * @param string $src
+	 *
 	 * @return string
 	 */
 	public function unversion( $src )
 	{
 		$src = remove_query_arg( 'ver', $src );
 		$src = str_replace( array( 'https:', 'http:' ), '', $src );
+
 		return $src;
 	}
 

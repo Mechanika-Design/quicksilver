@@ -58,6 +58,7 @@ class General {
 
 	/**
 	 * Stop self pinging
+	 *
 	 * @link http://wordpress.stackexchange.com/a/1852
 	 *
 	 * @param array $links

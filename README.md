@@ -9,8 +9,7 @@
 * Cleans up header.
 * Removes styles for recent comments widget.
 * Remove Jetpack devicex script.
+* Load CSS asynchronously (and selectively).
 
-The plugin doesn't require any configuration. It automatically does everything behind the scene. Just install and forget.
-
-Quicksilver is created and maintained FREE on [Github](https://github.com/mechanika-design/quicksilver). Please open a [new issue](https://github.com/warremgayen/mechanika-design/issues) to add a suggestion or report a bug.
+Quicksilver is created and maintained FREE on [Github](https://github.com/mechanika-design/quicksilver). Please open a [new issue](https://github.com/mechanika-design/quicksilver/issues) to add a suggestion or report a bug.
 
