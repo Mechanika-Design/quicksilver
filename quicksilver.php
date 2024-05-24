@@ -3,7 +3,7 @@
  * Plugin Name: Quicksilver
  * Plugin URI: http://mechanikadesign.com
  * Description: A WordPress cleanup and performance optimization plugin.
- * Version: 1.3.0
+ * Version: 1.3.1
  * Author: Mechanika Design
  * Author URI: https://mechanikadesign.com
  * License: GPL2+
@@ -14,9 +14,7 @@
  */
 
 namespace Quicksilver;
-use Media;
-
-require 'vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 new General;
 new Embed;
