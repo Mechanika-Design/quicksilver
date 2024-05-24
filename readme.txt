@@ -1,9 +1,9 @@
-=== Quicksilver ===
+=== Quicksilver  - WordPress Optimization ===
 Contributors: Warren Galyen
 Tags: optimization, optimize, optimizer, loading speed, performance, speed, clean, clean up, cleaner, ping, pingback, heartbeat, emoji, emojis
 Requires at least: 5.9
 Tested up to: 6.4.3
-Stable tag: 1.2.2
+Stable tag: 1.3.0
 License: GPLv2 or later
 
 **Quicksilver** is a minimalist WordPress plugin which cleans up your website and optimizes it for best performance.
@@ -22,7 +22,6 @@ License: GPLv2 or later
 * Cleans up header.
 * Removes styles for recent comments widget.
 * Remove Jetpack devicex script.
-* Load CSS asynchronously (and selectively).
 
 To configure the async CSS loading, go to *Settings | Quicksilver*.
 
@@ -43,6 +42,11 @@ The plugin doesn't have any settings page or configuration. Just install and for
 The plugin doesn't have any settings page or configuration. Just install and forget!
 
 == Changelog ==
+
+= 1.3.0 =
+* Remove settings page
+* Do not use jQuery from Google CDN for better compatibility
+* Remove support for loading CSS async
 
 = 1.2.2 =
 * Add option to use latest version of jQuery

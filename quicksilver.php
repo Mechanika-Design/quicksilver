@@ -3,7 +3,7 @@
  * Plugin Name: Quicksilver
  * Plugin URI: http://mechanikadesign.com
  * Description: A WordPress cleanup and performance optimization plugin.
- * Version: 1.2.2
+ * Version: 1.3.0
  * Author: Mechanika Design
  * Author URI: https://mechanikadesign.com
  * License: GPL2+
@@ -14,24 +14,14 @@
  */
 
 namespace Quicksilver;
+use Media;
 
-require __DIR__ . '/inc/Autoloader.php';
-$loader = new Autoloader;
-$loader->addNamespace( 'Quicksilver', __DIR__ . '/inc' );
-$loader->register();
+require 'vendor/autoload.php';
 
 new General;
 new Embed;
 
-if ( is_admin() ) {
-	new Settings;
-} else {
+if ( ! is_admin() ) {
 	new Header;
 	new Media;
-	new AsyncCSS;
 }
-
-// Load plugin textdomain.
-add_action('init', function () {
-	load_plugin_textdomain('quicksilver', false, plugin_basename(dirname(__FILE__)) . '/languages');
-});

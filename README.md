@@ -9,7 +9,6 @@
 * Cleans up header.
 * Removes styles for recent comments widget.
 * Remove Jetpack devicex script.
-* Load CSS asynchronously (and selectively).
 
 Quicksilver is created and maintained FREE on [Github](https://github.com/mechanika-design/quicksilver). Please open a [new issue](https://github.com/mechanika-design/quicksilver/issues) to add a suggestion or report a bug.
 
