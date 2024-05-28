@@ -1,4 +1,23 @@
 {
+  "name": "mechanikadesign/quicksilver",
+  "type": "wordpress-plugin",
+  "keywords": [
+    "wordpress",
+    "wordpress-plugin",
+    "performance",
+    "optimization"
+  ],
+  "description": "Quicksilver is a WordPress plugin which cleans up your website and optimizes it for better performance.",
+  "homepage": "https://mechanikadesign.com",
+  "license": "GPL-2.0",
+  "authors": [
+    {
+      "name": "Warren Glayen",
+      "email": "wgalyen@mechanikadesign.com",
+      "homepage": "https://mechanikadesign.com",
+      "role": "Developer"
+    }
+  ],
   "repositories": [
     {
       "type":"composer",
