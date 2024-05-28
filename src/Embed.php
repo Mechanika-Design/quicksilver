@@ -10,6 +10,7 @@
  * @package disable-embeds
  */
 
+namespace Quicksilver;
 
 class Embed {
 	/**

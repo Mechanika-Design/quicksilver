@@ -8,6 +8,7 @@
  * @link    https://mechanikadesign.com
  */
 
+namespace Quicksilver;
 
 /**
  * General optimization class.

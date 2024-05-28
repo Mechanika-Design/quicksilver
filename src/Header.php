@@ -7,6 +7,7 @@
  * @link    https://mechanikadesign.com
  */
 
+namespace Quicksilver;
 
 /**
  * Header class.
