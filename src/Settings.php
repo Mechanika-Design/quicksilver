@@ -24,8 +24,8 @@ class Settings {
                         <h3><?php esc_html_e( 'General', 'quicksilver' ) ?></h3>
                         <p>
                             <label>
-                                <input type="checkbox" name="quicksilver[features][]" value="no_heartbeats"<?php checked( self::is_feature_active( 'no_heartbeats' ) ) ?>>
-								<?php esc_html_e( 'Disable heartbeats', 'quicksilver' ) ?>
+                                <input type="checkbox" name="quicksilver[features][]" value="no_heartbeat"<?php checked( self::is_feature_active( 'no_heartbeat' ) ) ?>>
+								<?php esc_html_e( 'Disable heartbeat', 'quicksilver' ) ?>
                             </label>
                         </p>
                         <p>
