@@ -3,7 +3,7 @@ Contributors: Warren Galyen
 Tags: optimization, optimize, optimizer, loading speed, performance, speed, clean, clean up, cleaner, ping, pingback, heartbeat, emoji, emojis
 Requires at least: 5.9
 Tested up to: 6.4.3
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -41,6 +41,9 @@ The plugin doesn't have any settings page or configuration. Just install and for
 == Screenshots ==
 
 == Changelog ==
+
+= 2.0.1 =
+- Fix PHP warning when blocking self-pings
 
 = 2.0.0 =
 - Re-add settings page
