@@ -64,6 +64,12 @@ class Settings {
 								<?= wp_kses_post( __( 'Removes styles for recent comments widget', 'quicksilver' ) ) ?>
                             </label>
                         </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" name="quicksilver[features][]" value="no_jquery_migrate"<?php checked( self::is_feature_active( 'no_jquery_migrate' ) ) ?>>
+			                    <?= wp_kses_post( __( 'Removes jQuery Migrate', 'quicksilver' ) ) ?>
+                            </label>
+                        </p>
 
                         <h3><?php esc_html_e( 'Header Cleanup', 'quicksilver' ) ?></h3>
                         <p>
