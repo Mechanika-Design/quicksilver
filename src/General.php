@@ -24,7 +24,7 @@ class General {
 			add_filter( 'style_loader_src', [ $this, 'remove_protocol' ] );
 		}
 		if ( Settings::is_feature_active( 'no_jquery_migrate' ) ) {
-			add_action( 'wp_default_scripts', array( $this, 'remove_jquery_migrate' ) );
+			add_action( 'wp_default_scripts', [ $this, 'remove_jquery_migrate' ] );
 		}
 	}
 
@@ -63,7 +63,7 @@ class General {
 	 */
 	public function stop_self_pings( &$links ) {
 		$home_url = home_url();
-		$links = array_filter( $links, function( $link ) {
+		$links    = array_filter( $links, function( $link ) use ( $home_url ) {
 			return false === strpos( $link, $home_url );
 		} );
 	}
@@ -77,16 +77,12 @@ class General {
 	}
 
 	public function remove_jquery_migrate( $scripts ) {
-		if ( ! is_admin() && isset( $scripts->registered[ 'jquery' ] ) ) {
-			$script = $scripts->registered[ 'jquery' ];
-
-			if ( $script->deps ) { // Check if the script has any dependencies
-				$script->deps = array_diff(
-					$script->deps, array(
-						'jquery-migrate'
-					)
-				);
-			}
+		if ( is_admin() || empty( $scripts->registered['jquery'] ) ) {
+			return;
+		}
+		$script = $scripts->registered['jquery'];
+		if ( $script->deps ) {
+			$script->deps = array_diff( $script->deps, ['jquery-migrate'] );
 		}
 	}
 }

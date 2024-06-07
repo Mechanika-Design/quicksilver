@@ -12,7 +12,7 @@ class Recommendation {
 			return $res;
 		}
 
-		$res->plugins[] = $this->get_plugin_info( 'quicksilver' );
+		$res->plugins[] = $this->get_plugin_info( 'slim-seo' );
 		return $res;
 	}
 

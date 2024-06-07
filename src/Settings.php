@@ -19,7 +19,7 @@ class Settings {
                 <div id="post-body" class="metabox-holder columns-2">
                     <form method="POST" action="" id="post-body-content">
 						<?php wp_nonce_field( 'save' ) ?>
-                        <p><?php esc_html_e( 'Select the features you want the plugin to do to clean up your website and optimize for a better performance.', 'quicksilver' ); ?></p>
+                        <p><?php esc_html_e( 'Select the features you want the plugin to do to clean up your website and optimize for a better performance.', quicksilver ); ?></p>
 
                         <h3><?php esc_html_e( 'General', 'quicksilver' ) ?></h3>
                         <p>
@@ -61,13 +61,13 @@ class Settings {
                         <p>
                             <label>
                                 <input type="checkbox" name="quicksilver[features][]" value="no_recent_comments_widget_style"<?php checked( self::is_feature_active( 'no_recent_comments_widget_style' ) ) ?>>
-								<?= wp_kses_post( __( 'Removes styles for recent comments widget', 'quicksilver' ) ) ?>
+	                            <?php esc_html_e( 'Removes styles for recent comments widget', 'quicksilver' ) ?>
                             </label>
                         </p>
                         <p>
                             <label>
                                 <input type="checkbox" name="quicksilver[features][]" value="no_jquery_migrate"<?php checked( self::is_feature_active( 'no_jquery_migrate' ) ) ?>>
-			                    <?= wp_kses_post( __( 'Removes jQuery Migrate', 'quicksilver' ) ) ?>
+	                            <?php esc_html_e( 'Removes jQuery Migrate', 'quicksilver' ) ?>
                             </label>
                         </p>
 
@@ -75,37 +75,37 @@ class Settings {
                         <p>
                             <label>
                                 <input type="checkbox" name="quicksilver[features][]" value="no_feed_links"<?php checked( self::is_feature_active( 'no_feed_links' ) ) ?>>
-								<?= wp_kses_post( __( 'Remove feed links', 'quicksilver' ) ) ?>
+	                            <?php esc_html_e( 'Remove feed links', 'quicksilver' ) ?>
                             </label>
                         </p>
                         <p>
                             <label>
                                 <input type="checkbox" name="quicksilver[features][]" value="no_rsd_link"<?php checked( self::is_feature_active( 'no_rsd_link' ) ) ?>>
-								<?= wp_kses_post( __( 'Remove RSD link', 'quicksilver' ) ) ?>
+	                            <?php esc_html_e( 'Remove RSD link', 'quicksilver' ) ?>
                             </label>
                         </p>
                         <p>
                             <label>
                                 <input type="checkbox" name="quicksilver[features][]" value="no_wlwmanifest_link"<?php checked( self::is_feature_active( 'no_wlwmanifest_link' ) ) ?>>
-								<?= wp_kses_post( __( 'Remove wlwmanifest link', 'quicksilver' ) ) ?>
+	                            <?php esc_html_e( 'Remove wlwmanifest link', 'quicksilver' ) ?>
                             </label>
                         </p>
                         <p>
                             <label>
                                 <input type="checkbox" name="quicksilver[features][]" value="no_adjacent_posts_links"<?php checked( self::is_feature_active( 'no_adjacent_posts_links' ) ) ?>>
-								<?= wp_kses_post( __( 'Remove adjacent posts links', 'quicksilver' ) ) ?>
+	                            <?php esc_html_e( 'Remove adjacent posts links', 'quicksilver' ) ?>
                             </label>
                         </p>
                         <p>
                             <label>
                                 <input type="checkbox" name="quicksilver[features][]" value="no_wp_generator"<?php checked( self::is_feature_active( 'no_wp_generator' ) ) ?>>
-								<?= wp_kses_post( __( 'Remove WordPress version number', 'quicksilver' ) ) ?>
+	                            <?php esc_html_e( 'Remove WordPress version number', 'quicksilver' ) ?>
                             </label>
                         </p>
                         <p>
                             <label>
                                 <input type="checkbox" name="quicksilver[features][]" value="no_shortlink"<?php checked( self::is_feature_active( 'no_shortlink' ) ) ?>>
-								<?= wp_kses_post( __( 'Remove shortlink', 'quicksilver' ) ) ?>
+	                            <?php esc_html_e( 'Remove shortlink', 'quicksilver' ) ?>
                             </label>
                         </p>
 						<?php submit_button( esc_html__( 'Save Changes', 'quicksilver' ) ); ?>
