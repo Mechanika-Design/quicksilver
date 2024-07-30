@@ -29,6 +29,7 @@ class Settings {
 
                         <h3><?php esc_html_e( 'General', 'quicksilver' ) ?></h3>
 	                    <?php
+	                    $this->checkbox( 'no_gutenberg', __( 'Disable Gutenberg (the block editor)', 'quicksilver' ) );
 	                    $this->checkbox( 'no_heartbeat', __( 'Disable heartbeat', 'quicksilver' ) );
 	                    $this->checkbox( 'no_xmlrpc', __( 'Disable XML-RPC', 'quicksilver' ) );
 	                    $this->checkbox( 'no_emojis', __( 'Disable emojis', 'quicksilver' ) );

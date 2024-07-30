@@ -2,6 +2,8 @@
 
 ### Features
 
+* Disable Gutenberg
+* Disable XML-RPC
 * Disable heartbeat
 * Disable emojis
 * Disable embeds, e.g. prevent others from embedding your site and vise-versa

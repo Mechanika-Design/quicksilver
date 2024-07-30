@@ -15,6 +15,7 @@ License: GPLv2 or later
 
 ### Features
 
+* Disable Gutenberg
 * Disable XML-RPC
 * Disable heartbeat
 * Disable emojis
