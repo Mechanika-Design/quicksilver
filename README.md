@@ -1,6 +1,6 @@
 **Quicksilver** is a WordPress plugin which **cleans up your website and optimizes it for better performance**.
 
-## What does Quicksilver do?
+### Features
 
 * Disable heartbeat
 * Disable emojis
