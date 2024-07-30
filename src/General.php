@@ -1,16 +1,17 @@
 <?php
+
 namespace Quicksilver;
 
 class General {
 	public function __construct() {
 		if ( Settings::is_feature_active( 'no_heartbeat' ) ) {
-			add_action( 'init', array( $this, 'disable_heartbeat' ), 1 );
+			add_action( 'init', [ $this, 'disable_heartbeat' ], 1 );
 		}
 		if ( Settings::is_feature_active( 'no_emojis' ) ) {
-			add_action( 'init', array( $this, 'disable_emojis' ) );
+			add_action( 'init', [ $this, 'disable_emojis' ] );
 		}
 		if ( Settings::is_feature_active( 'no_self_pings' ) ) {
-			add_action( 'pre_ping', array( $this, 'stop_self_pings' ) );
+			add_action( 'pre_ping', [ $this, 'stop_self_pings' ] );
 		}
 		if ( Settings::is_feature_active( 'no_recent_comments_widget_style' ) ) {
 			add_filter( 'show_recent_comments_widget_style', '__return_false' );
@@ -46,14 +47,15 @@ class General {
 	}
 
 	public function disable_emojis_tinymce( $plugins ) {
-		return is_array( $plugins ) ? array_diff( $plugins, ['wpemoji'] ) : [];
+		return is_array( $plugins ) ? array_diff( $plugins, [ 'wpemoji' ] ) : [];
 	}
 
 	public function remove_emojis_dns_prefetch( $urls, $relation_type ) {
 		if ( 'dns-prefetch' !== $relation_type ) {
 			return $urls;
 		}
-		return array_filter( $urls, function( $url ) {
+
+		return array_filter( $urls, function ( $url ) {
 			return false === strpos( $url, 'https://s.w.org/images/core/emoji/' );
 		} );
 	}
@@ -63,7 +65,7 @@ class General {
 	 */
 	public function stop_self_pings( &$links ) {
 		$home_url = home_url();
-		$links    = array_filter( $links, function( $link ) use ( $home_url ) {
+		$links    = array_filter( $links, function ( $link ) use ( $home_url ) {
 			return false === strpos( $link, $home_url );
 		} );
 	}
@@ -82,7 +84,7 @@ class General {
 		}
 		$script = $scripts->registered['jquery'];
 		if ( $script->deps ) {
-			$script->deps = array_diff( $script->deps, ['jquery-migrate'] );
+			$script->deps = array_diff( $script->deps, [ 'jquery-migrate' ] );
 		}
 	}
 }

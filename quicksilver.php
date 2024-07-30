@@ -12,6 +12,7 @@
  */
 
 namespace Quicksilver;
+
 require __DIR__ . '/vendor/autoload.php';
 
 new General;

@@ -4,7 +4,7 @@ namespace Quicksilver;
 
 class Header {
 	public function __construct() {
-		add_action( 'template_redirect', array( $this, 'cleanup' ) );
+		add_action( 'template_redirect', [ $this, 'cleanup' ] );
 	}
 
 	public function cleanup() {
