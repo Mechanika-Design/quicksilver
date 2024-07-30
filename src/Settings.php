@@ -7,8 +7,14 @@ class Settings {
 	}
 
 	public function add_menu() {
-		$page_hook = add_options_page( esc_html__( 'Quicksilver', 'quicksilver' ), esc_html__( 'Quicksilver', 'quicksilver' ), 'manage_options', 'quicksilver', [ $this, 'render' ] );
-		add_action( "load-{$page_hook}", [ $this, 'save' ] );
+		$page = add_options_page(
+			__( 'Quicksilver', 'quicksilver' ),
+			__( 'Quicksilver', 'quicksilver' ),
+			'manage_options',
+			'quicksilver',
+			[ $this, 'render' ]
+		);
+		add_action( "load-$page", [ $this, 'save' ] );
 	}
 
 	public function render() {
@@ -26,6 +32,12 @@ class Settings {
                             <label>
                                 <input type="checkbox" name="quicksilver[features][]" value="no_heartbeat"<?php checked( self::is_feature_active( 'no_heartbeat' ) ) ?>>
 								<?php esc_html_e( 'Disable heartbeat', 'quicksilver' ) ?>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" name="quicksilver[features][]" value="no_xmlrpc"<?php checked( self::is_feature_active( 'no_xmlrpc' ) ) ?>>
+			                    <?php esc_html_e( 'Disable XML-RPC', 'quicksilver' ) ?>
                             </label>
                         </p>
                         <p>
@@ -135,8 +147,8 @@ class Settings {
 		update_option( 'quicksilver', $data );
 	}
 
-	public static function is_feature_active( $feature ) {
+	public static function is_feature_active( string $name ) : bool {
 		$data = get_option( 'quicksilver', null );
-		return null === $data ? true : in_array( $feature, $data['features'], true );
+		return null === $data ? true : in_array( $name, $data['features'], true );
 	}
 }

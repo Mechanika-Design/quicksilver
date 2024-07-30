@@ -15,6 +15,7 @@ License: GPLv2 or later
 
 ### Features
 
+* Disable XML-RPC
 * Disable heartbeat
 * Disable emojis
 * Disable embeds, e.g. prevent others from embedding your site and vise-versa
