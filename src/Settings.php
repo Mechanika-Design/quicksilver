@@ -96,6 +96,7 @@ class Settings
 
         $data = isset($_POST['quicksilver']) ? $_POST['quicksilver'] : [];
         update_option('quicksilver', $data);
+        add_settings_error(null, 'quicksilver', __('Settings saved.', 'quicksilver'), 'success');
     }
 
     public static function is_feature_active(string $name): bool
