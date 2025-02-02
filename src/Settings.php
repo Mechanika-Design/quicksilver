@@ -44,9 +44,11 @@ class Settings
                             $this->checkbox('no_emojis', __('Disable emojis', 'quicksilver'));
                             $this->checkbox('no_embeds', __('Disable embeds, e.g. prevent others from embedding your site and vise-versa', 'quicksilver'));
                             $this->checkbox('no_self_pings', __('Disable self pings', 'quicksilver'));
+                            $this->checkbox('no_revisions', __('Disable revisions', 'quicksilver'));
                             ?>
                         </div>
                         <div class="tab-pane hidden" id="tab-header">
+
                             <?php
                             $this->checkbox('no_feed_links', __('Remove feed links', 'quicksilver'));
                             $this->checkbox('no_rsd_link', __('Remove RSD link', 'quicksilver'));
@@ -59,12 +61,14 @@ class Settings
                         <div class="tab-pane hidden" id="tab-assets">
                             <?php
                             $this->checkbox('no_query_string', __('Remove query string for JavaScript and CSS files', 'quicksilver'));
+
+                            $this->checkbox('no_jquery_migrate', __('Removes jQuery Migrate', 'quicksilver'));
                             $this->checkbox('schema_less_urls', __('Set scheme-less URLs for JavaScript and CSS files, e.g. remove <code>http:</code> and <code>https:</code> from URLs', 'quicksilver'));
                             $this->checkbox('no_recent_comments_widget_style', __('Removes styles for recent comments widget', 'quicksilver'));
-                            $this->checkbox('no_jquery_migrate', __('Removes jQuery Migrate', 'quicksilver'));
+
                             ?>
                         </div>
-                       
+
                         <?php submit_button(esc_html__('Save Changes', 'quicksilver')); ?>
                     </form>
                     <div id="postbox-container-1" class="postbox-container">
