@@ -1,6 +1,6 @@
 <?php
 
-namespace Quicksilver\Admin;
+namespace Quicksilver;
 
 class Login
 {
