@@ -42,9 +42,8 @@ class Settings
                             $this->checkbox('no_heartbeat', __('Disable heartbeat', 'quicksilver'));
                             $this->checkbox('no_xmlrpc', __('Disable XML-RPC', 'quicksilver'));
                             $this->checkbox('no_emojis', __('Disable emojis', 'quicksilver'));
-                            $this->checkbox('no_embeds', __('Disable embeds, e.g. prevent others from embedding your site and vise-versa', 'quicksilver'));
-                            $this->checkbox('no_self_pings', __('Disable self pings', 'quicksilver'));
                             $this->checkbox('no_revisions', __('Disable revisions', 'quicksilver'));
+                            $this->checkbox('no_self_pings', __('Disable self pings', 'quicksilver'));
                             ?>
                         </div>
                         <div class="tab-pane hidden" id="tab-header">
