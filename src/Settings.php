@@ -101,6 +101,7 @@ class Settings
 
     public function enqueue()
     {
+        wp_enqueue_style('quicksilver-settings', QUICKSILVER_URL . 'assets/settings.css', [], filemtime(QUICKSILVER_DIR . '/assets/settings.css'));
         wp_enqueue_script('quicksilver-settings', QUICKSILVER_URL . 'assets/settings.js', [], filemtime(QUICKSILVER_DIR . '/assets/settings.js'), true);
     }
 
@@ -110,7 +111,7 @@ class Settings
             return;
         }
 
-        $data = isset($_POST['quicksilver']) ? $_POST['quicksilver'] : [];
+        $data = $_POST['quicksilver'] ?? [];
         update_option('quicksilver', $data);
         add_settings_error(null, 'quicksilver', __('Settings saved.', 'quicksilver'), 'success');
     }
@@ -125,8 +126,9 @@ class Settings
     {
     ?>
         <p>
-            <label>
+            <label class="switch">
                 <input type="checkbox" name="quicksilver[features][]" value="<?= esc_attr($name) ?>" <?php checked(self::is_feature_active($name)) ?>>
+                <span class="switch-icon"></span>
                 <?= wp_kses_post($label) ?>
             </label>
         </p>
