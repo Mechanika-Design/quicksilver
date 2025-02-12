@@ -84,16 +84,6 @@ class Settings
 
                         <?php submit_button(esc_html__('Save Changes', 'quicksilver')); ?>
                     </form>
-                    <div id="postbox-container-1" class="postbox-container">
-                        <div class="postbox">
-                            <h3 class="hndle">
-                                <span><?php esc_html_e('Our WordPress Plugins', 'quicksilver') ?></span>
-                            </h3>
-                            <div class="inside">
-                                <p><?php esc_html_e('Like this plugin? Check out our other WordPress plugins:', 'quicksilver') ?></p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
