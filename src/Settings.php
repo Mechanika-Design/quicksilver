@@ -39,6 +39,7 @@ class Settings
                         <div class="tab-pane" id="tab-general">
                             <?php
                             $this->checkbox('no_gutenberg', __('Disable Gutenberg (the block editor)', 'quicksilver'));
+                            $this->checkbox('no_rest_api', __('Disable REST API', 'quicksilver'));
                             $this->checkbox('no_heartbeat', __('Disable heartbeat', 'quicksilver'));
                             $this->checkbox('no_xmlrpc', __('Disable XML-RPC', 'quicksilver'));
                             $this->checkbox('no_emojis', __('Disable emojis', 'quicksilver'));
