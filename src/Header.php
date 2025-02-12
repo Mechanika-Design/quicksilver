@@ -11,6 +11,7 @@ class Header extends Base
         'no_adjacent_posts_links',
         'no_wp_generator',
         'no_shortlink',
+        'no_rest_link',
     ];
 
     public function no_feed_links()
@@ -42,5 +43,11 @@ class Header extends Base
     public function no_shortlink()
     {
         remove_action('wp_head', 'wp_shortlink_wp_head');
+    }
+
+    public function no_rest_link()
+    {
+        remove_action('wp_head', 'rest_output_link_wp_head');
+        remove_action('template_redirect', 'rest_output_link_header', 11);
     }
 }
